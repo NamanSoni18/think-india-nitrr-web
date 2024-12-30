@@ -1,0 +1,352 @@
+.quiz-button {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(-2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(235, 100%, 51%) 0%,
+    hsl(235, 95%, 32%) 8%,
+    hsl(235, 95%, 23%) 92%,
+    hsl(235, 100%, 3%) 100%
+  );
+}
+
+.front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(235, 90%, 42%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.quiz-button:hover {
+  filter: brightness(110%);
+}
+
+.quiz-button:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.quiz-button:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.quiz-button:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.quiz-button:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.quiz-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* From Uiverse.io by G4b413l */
+.group {
+  position: relative;
+}
+
+.contact-form-label {
+  font-weight: bold;
+  color: black;
+}
+
+.input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  font-weight: 500;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+
+.input:focus {
+  outline: none;
+  border: none;
+}
+
+.contact-form-label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.input:focus ~ label,
+.input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264ae;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 200px;
+}
+
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264ae;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+.input:focus ~ .bar:before,
+.input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #5264ae;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+.contact-form-get-in-touch {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  outline: none;
+  border: none;
+  /* border: 3px solid #ff6200; */
+  background-color: #ff6200;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: #f7f6f6;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+.contact-form-get-in-touch:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #ffd500;
+  z-index: -1;
+}
+
+.contact-form-get-in-touch:hover,
+.contact-form-get-in-touch:focus {
+  color: rgb(16, 7, 7);
+}
+
+.contact-form-get-in-touch:hover:before,
+.contact-form-get-in-touch:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.contact-form-get-in-touch:active {
+  transform: scale(0.3);
+}
+
+.ConnectContri-btn {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  /* letter-spacing: 1px; */
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #df5c05;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #d28110;
+}
+
+.ConnectContri-btn:hover {
+  color: #ffffff;
+  transform: scale(1.001);
+  outline: 2px solid #f48609;
+  box-shadow: 4px 5px 17px -4px #db750e;
+}
+
+.ConnectContri-btn::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ee7817;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.ConnectContri-btn:hover::before {
+  width: 250%;
+}
+
+.helpdesk-container {
+  padding: 2rem;
+}
+
+.helpdesk-container h1 {
+  color: #333;
+}
+
+.helpdesk-container p {
+  color: #666;
+}
+
+.helpdesk-container .button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+.helpdesk-container .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.helpdesk-container .card {
+  position: relative;
+  overflow: hidden;
+  background: #f4f4f4;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.helpdesk-container .card:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.helpdesk-container .card img {
+  width: 100%;
+  height: auto;
+}
+
+.helpdesk-container .card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.helpdesk-container .card:hover .card-content {
+  opacity: 1;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Add this to your CSS file (e.g., App.css) */
+@keyframes float {
+0% {
+  transform: translateY(0px);
+}
+50% {
+  transform: translateY(-10px);
+}
+100% {
+  transform: translateY(0px);
+}
+}
+
+.floating-image {
+animation: float 3s ease-in-out infinite;
+}

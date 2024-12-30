@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="1000" height="600" fill="#FFF8EE" />
+  
+  <!-- Larger filled curve that extends more to the left -->
+  <path 
+    d="M 400, 1200 
+    A 700,700 0 0,1 800,40 
+    L 800,600 Z" 
+    fill="#FF8B3D"
+    opacity="0.4"
+  />
+  
+  <!-- Aligned outlines following the same larger curve -->
+  <path 
+    d="M 100,600 
+    A 700,700 0 0,1 800,-50" 
+    fill="none"
+    stroke="#FF8B3D"
+    stroke-width="4"
+    opacity="0.4"
+  />
+  
+  <path 
+    d="M 150,600 
+    A 700,700 0 0,1 800,0" 
+    fill="none"
+    stroke="#FF8B3D"
+    stroke-width="4"
+    opacity="0.4"
+  />
+  
+  <path 
+    d="M 200,600 
+    A 700,700 0 0,1 800,50" 
+    fill="none"
+    opacity="0.4"
+  />
+</svg>
